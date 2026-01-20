@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </head>
+  <body>
+   
+  <style>
+    /* สีพื้นหลังทั้งหน้า */
+    body {
+      background-color: #f8f9fa;
+    }
+
+    /* กล่องเนื้อหาหลัก */
+    .content {
+      padding: 40px 15px;
+    }
+
+    /* แกลเลอรีรูปภาพ */
+    .gallery {
+      display: flex;            /* เรียงรูปในแนวนอน */
+      justify-content: center;  /* จัดรูปให้อยู่กลาง */
+      gap: 15px;                /* ระยะห่างระหว่างรูป */
+      flex-wrap: wrap;          /* ให้ตัดบรรทัดเมื่อจอเล็ก */
+    }
+
+    /* รูปในแกลเลอรี */
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;        /* ครอบรูปไม่ให้บิดเบี้ยว */
+      border-radius: 10px;      /* มุมโค้ง */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* เงา */
+      transition: transform 0.3s ease;
+    }
+
+    /* เอฟเฟกต์เมื่อเอาเมาส์ชี้ */
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= Navbar ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container">
+
+    <!-- ชื่อเว็บไซต์ -->
+    <a class="navbar-brand" href="#">Anuwat</a>
+
+    <!-- ปุ่มเมนูสำหรับมือถือ -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- เมนูนำทาง -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">หน้าแรก</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">เกี่ยวกับเรา</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ติดต่อเรา</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ================= Content ================= -->
+<div class="container content">
+
+  <!-- หัวข้อหลัก -->
+  <h1 class="text-center mb-4">
+    Nang Rong Waterfall <br> น้ำตกนางรอง (นครนายก)
+  </h1>
+
+  <!-- เนื้อหา -->
+  <p class="text-center mb-5">
+    น้ำตกนางรอง ตั้งอยู่ที่ตำบลหินตั้ง อำเภอเมือง จังหวัดนครนายก
+    อยู่ในเขตอุทยานแห่งชาติเขาใหญ่ ซึ่งเป็นพื้นที่ธรรมชาติที่อุดมสมบูรณ์
+    น้ำตกมีลักษณะไหลเป็นชั้น ๆ ผ่านโขดหินธรรมชาติ
+    มีแอ่งน้ำให้ลงเล่น เหมาะสำหรับทั้งเด็กและผู้ใหญ่
+  </p>
+
+  <!-- หัวข้อแกลเลอรี -->
+  <h2 class="text-center mb-4">📸 ภาพบรรยากาศ</h2>
+
+  <!-- ================= Gallery ================= -->
+  <div class="gallery">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Nang_Rong_Waterfall.jpg" alt="น้ำตกนางรอง">
+    <img src="https://files.thailandtourismdirectory.go.th/assets/upload/2018/09/18/20180918eccbc87e4b5ce2fe28308fd9f2a7baf3121949.jpg" alt="บรรยากาศน้ำตกนางรอง">
+    <img src="https://d2d3n9ufwugv3m.cloudfront.net/w1200-h900-cfill/topics/V6BAC-nang%20rong%20waterfall%20-%20khao%20yai.jpg" alt="น้ำตกนางรอง เขาใหญ่">
+  </div>
+
+</div>
+
+<!-- ================= Footer ================= -->
+<footer class="bg-success text-white text-center py-3 mt-5">
+  © 2026 Nang Rong Waterfall | Designed by Anuwat
+</footer>
+
+</body>
+</html>
