@@ -1,0 +1,46 @@
+{% block content %}
+<h2 style="color: blueviolet; text-align: center; margin-bottom: 20px;">
+    ยินดีต้อนรับเข้าสู่เว็บไซต์ของรายวิชา ICT12367
+</h2>
+
+<div class="container">
+    <table class="table table-hover" style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="border-bottom: 2px solid #dee2e6; text-align: center;">
+                <th style="padding: 12px;">รหัสประชากร</th>
+                <th style="padding: 12px;">ชื่อประชากร</th>
+                <th style="padding: 12px;">อายุ</th>
+                <th style="padding: 12px;">แก้ไข</th>
+                <th style="padding: 12px;">ลบ</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in all_person %}
+            <tr style="border-bottom: 1px solid #dee2e6; vertical-align: middle;">
+                <td style="padding: 12px; text-align: center;">{{ person.id }}</td>
+                <td style="padding: 12px;">{{ person.name }}</td>
+                <td style="padding: 12px; text-align: center;">{{ person.age }}</td>
+                
+                <td style="text-align: center;">
+                    <a href="#" style="background-color: #FF69B4; color: white; padding: 7px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">
+                        แก้ไข
+                    </a>
+                </td>
+                
+                <td style="text-align: center;">
+                    <a href="#" style="background-color: #FF8C00; color: white; padding: 7px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">
+                        ลบ
+                    </a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5" style="text-align: center; padding: 30px; color: gray;">
+                    ยังไม่มีข้อมูลประชากรในระบบ
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
